@@ -19,8 +19,7 @@ int main(int argc, char *argv[]) {
 	float distance = atof(argv[1]);
 	int result;
 	//Your codes here
-	printf("Enter the distance: \n");
-	scanf("%f",&distance);
+	
 	if(distance<=2){
 		result=15000;
 	}
