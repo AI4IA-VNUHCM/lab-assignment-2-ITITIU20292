@@ -17,9 +17,30 @@ ______________________________________
 int main(int argc, char *argv[]) {
 	//testing variable, applying it to your algorithm for auto-evaluating
 	int n = atoi(argv[1]);
-	int result;
 	//Your codes here
+int odd_fact=1,even_fact=1;    
+ printf("Enter a number: ");    
+  scanf("%d",&n);  
+  if( n%2==0)
+    {
+		for(int i=2;i<=n;i+=2)
+		{
+			even_fact*=i;
+		}
+		printf("factorial if n is even :%d\n",even_fact);
+	}else if(n %2 !=0)
+	{
+		for(int i=1;i<=n;i+=2)
+		{
+			odd_fact*=i;
+		}
+		printf("factorial if n is odd :%d\n",odd_fact);
+	}
+  
+
+    
+    
 	
-	printf("%d", result);
+	
 	return 0;
 }
