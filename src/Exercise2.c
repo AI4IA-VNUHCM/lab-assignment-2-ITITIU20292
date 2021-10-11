@@ -19,8 +19,7 @@ int main(int argc, char *argv[]) {
 	int n = atoi(argv[1]);
 	//Your codes here
 int odd_fact=1,even_fact=1;    
- printf("Enter a number: ");    
-  scanf("%d",&n);  
+
   if( n%2==0)
     {
 		for(int i=2;i<=n;i+=2)
