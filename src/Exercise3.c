@@ -15,24 +15,23 @@ int main(int argc, char *argv[]) {
 	int testcase = atoi(argv[1]);
 	
 	//Your codes here
-	int n;
-    printf("Enter number (n>1) = ");
-    scanf("%d", &n);
-    if(n<2){
-        printf("Enter number (n>1)");
-    }else{
-    printf("%d = ", n);
-
-    for (int i = 2; i <= n; i++) {
-        while(n % i == 0) {
-            printf("%d", i);
-            if(n !=i){
-                printf("*");
-            }
-            n /= i;
+	while (testcase%2 == 0)
+    {
+        printf("%d ", 2);
+        testcase = testcase/2;
+    }
+    for (int i = 3; i <= sqrt(testcase); i = i+2)
+    {
+        while (testcase%i == 0)
+        {
+            printf("%d ",i);
+            testcase = testcase/i;
+			if(testcase >= i)
+			    printf("* ");
         }
     }
-}
-	
+    if (testcase > 2)
+        printf ("%d ", testcase);
 	return 0;
 }
+    
